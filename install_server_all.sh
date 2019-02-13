@@ -16,7 +16,6 @@ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubun
 sudo apt-get update
 #apt-cache policy docker-ce
 sudo apt-get install -y docker-ce
-#sudo systemctl status docker
 echo "*** Install Docker ok..."
 
 echo "*** 2.Docker-compose"
@@ -30,7 +29,7 @@ echo "*** start docker nginx ***"
 export WORKDIR=$(pwd)
 
 echo "\n############### start docker Nginx  ###############"
-docker-compose -f ${WORKDIR}/server-nginx/docker-compose.yml up -d
+sudo docker-compose -f ${WORKDIR}/server-nginx/docker-compose.yml up -d
 
 echo "\n*** remove docker none all ***"
-docker rmi $(docker images | grep '<none>' | awk {'print$3'})
+sudo docker rmi $(docker images | grep '<none>' | awk {'print$3'})
