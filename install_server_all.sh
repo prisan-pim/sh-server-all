@@ -4,11 +4,11 @@ echo "*** 1.Nginx"
 echo "*** 2.Docker"
 echo "*** 3.Docker-compose\n"
 
-echo "*** 1.Nginx"
-sudo apt-get update
-sudo apt-get install nginx
-sudo ufw app list
-echo "*** Install Nginx ok..."
+# echo "*** 1.Nginx"
+# sudo apt-get update
+# sudo apt-get install nginx
+# sudo ufw app list
+# echo "*** Install Nginx ok..."
 
 echo "*** 2.Docker"
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
