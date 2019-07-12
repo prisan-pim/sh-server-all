@@ -25,6 +25,7 @@ echo "*** Install Docker ok..."
 
 
 sudo usermod -aG docker ${USER}
+chmod 777 /var/run/docker.sock
 
 # echo "*** start docker nginx ***"
 # export WORKDIR=$(pwd)
