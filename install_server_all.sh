@@ -5,8 +5,8 @@ echo "*** 2.Docker"
 echo "*** 3.Docker-compose\n"
 
 echo "*** 1.Nginx"
-sudo apt-get update
-sudo apt-get install nginx
+#sudo apt-get update
+#sudo apt-get install nginx
 echo "*** Install Nginx ok..."
 
 echo "*** 2.Docker"
@@ -23,6 +23,8 @@ sudo chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 echo "*** Install Docker ok..."
 
+
+sudo usermod -aG docker ${USER}
 
 # echo "*** start docker nginx ***"
 # export WORKDIR=$(pwd)
